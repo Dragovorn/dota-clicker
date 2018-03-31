@@ -3,13 +3,6 @@ html, body {
     height: 100%;
 }
 
-footer {
-    margin-top: 98%;
-    align-content: center;
-    text-align: center;
-    opacity: 0.5;
-}
-
 body {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -24,9 +17,9 @@ body {
 }
 
 .title {
-    font-size:28px;
-	text-shadow:0px 0px 4px #000;
-	color:#fff;
+    font-size: 28px;
+	text-shadow: 0px 0px 4px #000;
+	color: #fff;
 }
 
 #wrapper {
@@ -52,9 +45,20 @@ body {
     position: absolute;
     left: 0px;
     top: 0px;
-    width: 30%;
+    width: 50%;
     bottom: 0px;
     min-width: 100px;
+}
+
+#right {
+    width: 50%;
+    height: 100%;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	background: grey;
 }
 
 #gold, #gps {
@@ -81,4 +85,43 @@ body {
 	margin: 8px;
 	font-size: 22px;
 	z-index: 100000000;
+}
+
+a:link {
+    color: #fff;
+}
+
+a:visited {
+    color: #fff;
+}
+
+#disclaimer {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: 0px;
+    opacity: 0.5;
+    margin: 8px;
+    font-size: 12px;
+    z-index: 100000000;
+    text-align: center;
+}
+
+#creepAnchor {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+}
+
+#bigCreep {
+    width: 256px;
+    height: 256px;
+    position: absolute;
+    left: -128px;
+    top: -128px;
+    background: white;
+    cursor: pointer;
+    z-index: 10000;
+/*    border-radius: 128px;*/
 }
