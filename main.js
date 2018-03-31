@@ -5,44 +5,30 @@
 var VERSION = "0.0.1";
 var BETA = true;
 
-var gold = 0;
-var gps = 0;
+function get(string) {
+    return document.getElementById(string);
+}
 
 var Game = {};
 
 Game.Launch = function() {
     Game.version = VERSION;
     Game.beta = BETA;
-    
-    Game.Launch = function() {
-        console.log("TEST");
-        Game.Init();
-    }
+    Game.gold = 0;
+    Game.gps = 0;
     
     Game.Init = function() {
-        get("version").innerHTML = "v" + Game.version + (Game.beta ? " <span style='color:#ff0;'>BETA</span>" : "");
+        get("version").innerHTML = "v" + Game.version + (Game.beta ? " <span style='color:#f00;'>BETA</span>" : "");
         
-        window.setInterval(function() { // TODO move this to game
-            gold = gold + gps;
-            updateWindow();
-        }, 1000);
+        Game.gold = Game.gold + Game.gps;
+        get("gold").innerHTML = Game.gold + " Gold";
+        get("gps").innerHTML = Game.gps + " Gold/s";
+        document.title = Game.gold + " Gold - Dota 2 Clicker";
     }
+    
+    Game.Init();
 }
 
-function updateWindow() {
-    get("gold").innerHTML = gold;
-    get("gps").innerHTML = gps;
-    document.title = gold + " Gold - Dota 2 Clicker";
+window.onload = function() {
+    Game.Launch(); // Launch this
 }
-
-function lastHit() {
-    gold = gold + 1; // Change this to calculate the percent
-    updateWindow();
-}
-
-function increaseGPS(number) {
-    gps = gps + number;
-    updateWindow();
-}
-
-Game.Launch(); // Launch this
