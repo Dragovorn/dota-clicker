@@ -89,7 +89,7 @@ Game.Launch = function() {
     }
 
     Game.Save = function() {
-        var jsonData = "\"gold\" : \"" + Game.gold + "\"}";
+        var jsonData = "{\"gold\" : \"" + Game.gold + "\"}";
 
         setCookie("D2Csavedata", jsonData, 365); // Maybe somehow make this a better 'infinite' duration cookie
 
