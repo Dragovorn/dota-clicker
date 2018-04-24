@@ -18,8 +18,8 @@ body {
 
 .title {
     font-size: 28px;
-	text-shadow: 0px 0px 4px #000;
-	color: #fff;
+    text-shadow: 0px 0px 4px #000;
+    color: #fff;
 }
 
 #wrapper {
@@ -74,17 +74,17 @@ body {
 }
 
 #gps {
-    top: 11.7%;
+    top: 12%;
 }
 
 #version {
     position: absolute;
-	left: 0px;
-	bottom: 0px;
-	opacity: 0.5;
-	margin: 8px;
-	font-size: 22px;
-	z-index: 100000000;
+    left: 0px;
+    bottom: 0px;
+    opacity: 0.5;
+    margin: 8px;
+    font-size: 22px;
+    z-index: 100000000;
 }
 
 a:link {
@@ -123,5 +123,5 @@ a:visited {
     background: white;
     cursor: pointer;
     z-index: 10000;
-/*    border-radius: 128px;*/
+/*  border-radius: 128px;*/
 }
