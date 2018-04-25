@@ -106,7 +106,7 @@ Game.Launch = function() {
 
         var json = JSON.parse(data);
 
-        Game.gold = json.gold;
+        Game.gold = Number(json.gold);
 
         console.log("Successfully loaded!");
     }
