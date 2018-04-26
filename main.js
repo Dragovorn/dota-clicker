@@ -70,6 +70,9 @@ Game.Launch = function() {
     }
 
     Game.ClickCreep = function() {
+        var audio = new Audio("/sound/last_hit.mp3");
+        audio.play();
+
         Game.gold = Game.gold + Game.CalculateClick();
     }
 
@@ -106,7 +109,9 @@ Game.Launch = function() {
 
         var json = JSON.parse(data);
 
-        Game.gold = Number(json.gold);
+        if (json.gold) {
+            Game.gold = Number(json.gold);
+        }
 
         console.log("Successfully loaded!");
     }
@@ -115,8 +120,6 @@ Game.Launch = function() {
         Game.Load();
 
         get("version").innerHTML = "v" + Game.version + (Game.beta ? " <span style='color:#f00;'>BETA</span>" : "");
-
-        Game.Tick();
 
         addEvent(get("bigCreep"), "click", Game.ClickCreep)
 
@@ -133,5 +136,5 @@ Game.Launch = function() {
 }
 
 window.onload = function() {
-    Game.Launch(); // Launch this
+    Game.Launch(); // Launch this trainwreck
 }
