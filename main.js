@@ -70,7 +70,7 @@ Game.Launch = function() {
     }
 
     Game.ClickCreep = function() {
-        var audio = new Audio("/sound/last_hit.mp3");
+        var audio = new Audio("sound/last_hit.mp3");
         audio.play();
 
         Game.gold = Game.gold + Game.CalculateClick();
