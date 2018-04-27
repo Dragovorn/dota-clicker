@@ -13,5 +13,5 @@ The ones with boxes that are checked means that they are implemented, duh.
 - [x] Main CSS
 - [ ] Purchasable products in the store
 - [x] Data saving using cookies
-- [ ] Last hit sound effect (code already implemented, just need to nab it from the VPK)
+- [x] Last hit sound effect (code already implemented, just need to nab it from the VPK)
 - [ ] Hero system
